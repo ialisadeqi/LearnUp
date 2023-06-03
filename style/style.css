@@ -189,3 +189,32 @@ p {
   margin-right: 2rem;
   vertical-align: middle;
 }
+
+/* Input */
+
+.input {
+  padding: 2rem 1.5rem;
+  outline: 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: var(--color-headings);
+  font-size: 2rem;
+}
+
+::placeholder {
+  color: #cdcbd7;
+}
+.input-group {
+  display: flex;
+  border: 1px solid #cdcbd7;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 0.5rem;
+}
+
+.input-group .btn {
+  margin: 4px;
+}
