@@ -1,0 +1,132 @@
+@import url(./normalize.css);
+
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url(../fonts/IRANSansWeb.woff2) format("woff2"),
+    url(../fonts/IRANSansWeb.woff) format("woff");
+}
+
+:root {
+  --color-primary: #032656;
+  --color-secondary: #252c41;
+  --color-accent: #d40c4b;
+  --color-headings: #222;
+  --color-body: #918ca4;
+  --color-body-darker: #5c5577;
+  --color-border: #ccc;
+  --border-radius: 30px;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+/* Typographi */
+
+::selection {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 6rem;
+}
+
+h2 {
+  font-size: 4rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--color-headings);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+
+body {
+  font-family: "IRANSansWeb", Times, serif;
+  direction: rtl;
+  font-size: 2rem;
+  color: var(--color-body);
+  line-height: 1.5;
+}
+
+p {
+  margin-top: 0;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    font-size: 1.8rem;
+  }
+  h1 {
+    font-size: 8rem;
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  h3 {
+    font-size: 2.4rem;
+  }
+}
+
+/* links */
+
+.material-symbols-outlined {
+  padding: 1rem;
+}
+
+/* Buttton */
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.icon--small {
+  width: 30px;
+  height: 30px;
+}
+
+.icon--primary {
+  color: var(--color-primary);
+}
+
+.icon--white {
+  color: #fff;
+}
+
+.icon-container {
+  background: #f3f9fa;
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon-container--accent {
+  background: #ef346f;
+}
+
+/* Badge */
+
+.badge {
+  padding: 0.25rem 1.5rem;
+  white-space: nowrap;
+  box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.2);
+  font-size: 1.8rem;
+  border-radius: 2px;
+}
