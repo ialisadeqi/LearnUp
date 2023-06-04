@@ -90,12 +90,12 @@ p {
 /* icon */
 
 .icon {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
 }
 
 .icon--small {
-  width: 30px;
+  width: 20px;
   height: 30px;
 }
 
@@ -182,11 +182,26 @@ p {
   background: #d91f5b;
 }
 
-.btn .material-symbols-outlined {
+.btn--soft {
+  background: #d1f6e6;
+  color: #63ad6b;
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+
+.btn--soft:hover {
+  background: #e0f5ec;
+}
+
+.btn .icon {
   background: #fff;
-  color: #222;
+  color: var(--color-accent);
   border-radius: 3px;
   margin-right: 2rem;
+  vertical-align: middle;
+}
+
+.btn .icon--small {
   vertical-align: middle;
 }
 
