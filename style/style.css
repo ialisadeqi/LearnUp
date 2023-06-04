@@ -60,6 +60,7 @@ body {
   font-size: 2rem;
   color: var(--color-body);
   line-height: 1.5;
+  height: 100vh;
 }
 
 p {
@@ -83,8 +84,8 @@ p {
 
 /* links */
 
-.material-symbols-outlined {
-  padding: 1rem;
+a {
+  text-decoration: none;
 }
 
 /* icon */
@@ -96,7 +97,11 @@ p {
 
 .icon--small {
   width: 20px;
-  height: 30px;
+  height: 20px;
+}
+
+.icon--star {
+  color: gold;
 }
 
 .icon--primary {
@@ -124,10 +129,14 @@ p {
 /* Badge */
 
 .badge {
-  padding: 0.25rem 1.5rem;
+  background: #fff;
+
   white-space: nowrap;
+  width: 15%;
+  padding: 0.5rem 0;
+  text-align: center;
   box-shadow: 0px 0px 0px 7px rgba(255, 255, 255, 0.2);
-  font-size: 1.8rem;
+  font-size: 2rem;
   border-radius: 2px;
 }
 
@@ -294,4 +303,100 @@ p {
   .list--tick .list__item {
     padding-left: 0;
   }
+}
+
+/* Media */
+
+.media {
+  display: flex;
+  vertical-align: middle;
+  margin: 1rem 1.5rem;
+}
+
+.media > a {
+  font-size: 1.8rem;
+  margin-right: 1rem;
+  color: var(--color-body);
+  float: left;
+}
+
+.media__user-image {
+  width: 50px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.media .media__username {
+  color: var(--color-headings);
+  font-weight: bold;
+  padding: 1rem 0;
+}
+
+/* cards */
+
+.card {
+  display: flex;
+  width: fit-content;
+  padding: 2rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 30px 10px #ccc;
+  margin: 2rem;
+  position: absolute;
+}
+
+.card__header {
+}
+
+.card__header .media {
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.card--sale {
+  padding: 0;
+  flex-direction: column;
+}
+
+.card__heading {
+  margin: 1rem 2.5rem;
+  color: var(--color-accent);
+}
+
+.card__image {
+  width: 100%;
+  object-fit: cover;
+}
+
+.card__header .badge {
+  position: relative;
+}
+
+.card__header .badge {
+  display: inline-block;
+  position: absolute;
+  right: 3%;
+  top: 1.5rem;
+}
+
+.card__content {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #3c3737;
+  padding: 2rem 1rem;
+}
+
+.card--simple {
+  background: #f8c6d5;
+  color: var(--color-accent);
+  transition: transform 0.3s;
+}
+
+.card--simple:hover {
+  transform: scale(1.1);
+}
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
 }
