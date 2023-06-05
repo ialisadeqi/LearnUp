@@ -170,6 +170,7 @@ a {
 .btn--primary:hover {
   background: var(--color-accent);
   color: #fff;
+  border: 0;
 }
 
 .btn--secondary {
@@ -247,17 +248,19 @@ a {
 
 .collapsible__header {
   display: flex;
-  justify-content: space-between;
 }
 
 .collapsible__heading {
   margin-top: 0;
   font-size: 3rem;
+  cursor: pointer;
 }
 
 .collapsible__chevron {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   transition: transform 0.3s;
+  cursor: pointer;
+  padding-right: 2px;
 }
 
 .collapsible__content {
@@ -268,7 +271,7 @@ a {
 }
 
 .collapsible--expanded .collapsible__chevron {
-  transform: rotate(0);
+  transform: rotate(90deg);
 }
 
 .collapsible--expanded .collapsible__content {
@@ -280,7 +283,7 @@ a {
 
 .list {
   list-style: none;
-  padding-left: 0;
+  padding-right: 0;
 }
 
 .list--inline .list__item {
@@ -344,9 +347,6 @@ a {
   position: absolute;
 }
 
-.card__header {
-}
-
 .card__header .media {
   display: inline-block;
   font-size: 1.5rem;
@@ -399,4 +399,98 @@ a {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+@media screen and (min-width: 768px) {
+  .grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Block */
+
+.block {
+  --padding-vertical: 5rem;
+  padding: var(--padding-vertical) 2rem;
+}
+
+.block__header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: var(--color-primary);
+  color: #7b858b;
+}
+
+.block--dark h1,
+.block--dark h2,
+.block--dark h3 {
+  color: #fff;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* Navigation Bar */
+.nav {
+  display: flex;
+  justify-content: space-around;
+  background: var(--color-primary);
+  align-items: baseline;
+  flex-wrap: nowrap;
+}
+
+.nav__band-name {
+  font-family: "Josefin Slab", serif;
+  font-weight: 900;
+  margin-top: 0;
+}
+
+.nav__brand h2 {
+  margin-top: 0;
+}
+
+.nav .collapsible__heading {
+  font-size: 2rem;
+}
+
+.nav h1,
+.nav h2,
+.nav h3,
+.nav a {
+  color: #fff;
+  margin-bottom: 0;
+}
+
+.nav__list {
+  width: auto;
+  margin: 0;
+}
+
+.nav__item {
+  padding: 0.5rem 1rem;
+}
+
+.nav__btn {
+  display: flex;
+  gap: 3rem;
 }
