@@ -454,10 +454,10 @@ a {
 /* Navigation Bar */
 .nav {
   display: flex;
-
   background: var(--color-primary);
   align-items: baseline;
-  flex-wrap: nowrap;
+  flex-wrap: wrap-reverse;
+  border-bottom: 1px solid #4c4b4b;
 }
 
 .nav__topic {
@@ -473,6 +473,7 @@ a {
   font-family: "Josefin Slab", serif;
   font-weight: 900;
   margin-top: 0;
+  align-items: center;
 }
 
 .nav__brand h2 {
@@ -518,5 +519,22 @@ a {
     background: var(--color-primary);
     align-items: baseline;
     flex-wrap: nowrap;
+  }
+}
+
+/* Hero */
+
+.hero__banner {
+  width: 100%;
+}
+
+.hero .btn-group {
+  justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content {
+    text-align: right;
+    align-self: center;
   }
 }
