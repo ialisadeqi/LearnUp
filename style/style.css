@@ -349,8 +349,6 @@ a {
   padding: 2rem 1rem;
   border-radius: 5px;
   box-shadow: 0 0 30px 10px #ccc;
-  margin: 2rem;
-  position: absolute;
 }
 
 .card__header .media {
@@ -584,4 +582,24 @@ a {
 
 .feature .icon-container {
   align-self: center;
+}
+
+/* Plan Block */
+
+.plan .grid {
+  gap: 2rem;
+}
+
+.plan .card {
+  width: inherit;
+}
+
+.plan .highlight {
+  color: var(--color-accent);
+}
+
+@media screen and (min-width: 768px) {
+  .plan .grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
