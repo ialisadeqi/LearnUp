@@ -48,7 +48,8 @@ h3 {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--color-headings);
   margin-bottom: 1rem;
   line-height: 1.1;
@@ -79,6 +80,10 @@ p {
   }
   h3 {
     font-size: 2.4rem;
+  }
+
+  h4 {
+    font-size: 1.8rem;
   }
 }
 
@@ -440,6 +445,11 @@ a {
   color: #7b858b;
 }
 
+.block--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+
 .block--dark h1,
 .block--dark h2,
 .block--dark h3 {
@@ -537,4 +547,41 @@ a {
     text-align: right;
     align-self: center;
   }
+  .hero .btn-group {
+    justify-content: right;
+  }
+}
+
+/* Features */
+
+.feature {
+  display: flex;
+  padding: 2rem 4rem;
+  gap: 2rem;
+  border-left: 1px solid #c69b9b;
+  justify-content: center;
+  font-size: 1.5rem;
+}
+
+.feature:last-child {
+  border: 0;
+}
+
+.feature__content {
+  display: flex;
+  flex-direction: column;
+}
+
+.feature__content h3 {
+  color: #fff;
+}
+
+.feature .icon {
+  width: max-content;
+  object-fit: fill;
+  align-self: center;
+}
+
+.feature .icon-container {
+  align-self: center;
 }
