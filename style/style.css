@@ -454,14 +454,19 @@ a {
 /* Navigation Bar */
 .nav {
   display: flex;
-  justify-content: space-around;
+
   background: var(--color-primary);
   align-items: baseline;
   flex-wrap: nowrap;
 }
 
-.nav:nth-child(2) {
-  color: var(--color-accent);
+.nav__topic {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 30%;
+  padding-right: 2rem;
+  align-items: baseline;
+  gap: 2rem;
 }
 
 .nav__band-name {
@@ -471,7 +476,7 @@ a {
 }
 
 .nav__brand h2 {
-  margin-top: 0;
+  margin: 1rem 2rem 0;
 }
 
 .nav .collapsible__heading {
@@ -503,6 +508,7 @@ a {
 .nav__btn {
   display: flex;
   gap: 3rem;
+  margin: 2rem;
 }
 
 @media screen and (min-width: 768px) {
