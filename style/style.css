@@ -148,7 +148,7 @@ a {
 /* Button */
 
 .btn {
-  padding: 1.5rem 3vw;
+  padding: 1.5rem 3rem;
   border: 0;
   border-radius: 5px;
   font-size: 1.8rem;
@@ -201,7 +201,10 @@ a {
   background: #d1f6e6;
   color: #63ad6b;
   border-radius: 30px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
+  width: inherit;
+  padding: 1rem 2rem;
+  height: fit-content;
 }
 
 .btn--soft:hover {
@@ -323,14 +326,14 @@ a {
 }
 
 .media > a {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   margin-right: 1rem;
   color: var(--color-body);
   float: left;
 }
 
 .media__user-image {
-  width: 50px;
+  width: 40px;
   border-radius: 100%;
   object-fit: cover;
 }
@@ -371,7 +374,7 @@ a {
   object-fit: cover;
 }
 
-.card__header .badge {
+.card__header {
   position: relative;
 }
 
@@ -386,7 +389,9 @@ a {
   display: flex;
   flex-direction: row;
   border-bottom: 1px solid #3c3737;
-  padding: 2rem 1rem;
+  padding: 0 1rem 1rem;
+  width: inherit;
+  justify-content: space-around;
 }
 
 .card--simple {
@@ -401,6 +406,7 @@ a {
 
 .card__footer {
   display: flex;
+  width: inherit;
   justify-content: space-between;
   padding: 1rem;
 }
@@ -443,6 +449,10 @@ a {
   color: #7b858b;
 }
 
+.block--fade {
+  background: #f4f5f7;
+  color: #7b858b;
+}
 .block--accent {
   background: var(--color-accent);
   color: #fff;
@@ -570,7 +580,7 @@ a {
   flex-direction: column;
 }
 
-.feature__content h3 {
+.feature__content h4 {
   color: #fff;
 }
 
@@ -587,11 +597,11 @@ a {
 /* Plan Block */
 
 .plan .grid {
-  gap: 2rem;
+  gap: 2rem 4rem;
 }
 
 .plan .card {
-  width: inherit;
+  width: initial;
 }
 
 .plan .highlight {
@@ -599,7 +609,13 @@ a {
 }
 
 @media screen and (min-width: 768px) {
-  .plan .grid--1x3 {
+  .grid--1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .grid--1x3 {
     grid-template-columns: repeat(3, 1fr);
   }
 }
