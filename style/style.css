@@ -248,6 +248,7 @@ a {
 
 .collapsible__header {
   display: flex;
+  padding-right: 10px;
 }
 
 .collapsible__heading {
@@ -459,6 +460,10 @@ a {
   flex-wrap: nowrap;
 }
 
+.nav:nth-child(2) {
+  color: var(--color-accent);
+}
+
 .nav__band-name {
   font-family: "Josefin Slab", serif;
   font-weight: 900;
@@ -483,14 +488,29 @@ a {
 
 .nav__list {
   width: auto;
-  margin: 0;
+  margin: 0 0 1rem;
+}
+
+.nav__item:last-child {
+  border: 0;
 }
 
 .nav__item {
   padding: 0.5rem 1rem;
+  border-bottom: 1px solid #444;
 }
 
 .nav__btn {
   display: flex;
   gap: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    background: var(--color-primary);
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
 }
