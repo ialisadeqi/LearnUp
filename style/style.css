@@ -514,24 +514,20 @@ a {
 }
 
 .container {
-  max-width: 1650px;
+  max-width: 1432px;
   margin: 0 auto;
 }
 
 /* Navigation Bar */
 .nav {
-  display: flex;
   background: var(--color-primary);
-  align-items: baseline;
-  flex-wrap: wrap-reverse;
   border-bottom: 1px solid #4c4b4b;
 }
 
 .nav__topic {
   display: flex;
   justify-content: space-around;
-  padding-left: 30%;
-  padding-right: 2rem;
+  padding: 2rem;
   align-items: baseline;
   gap: 2rem;
 }
@@ -539,13 +535,12 @@ a {
 .nav__band-name {
   font-family: "Josefin Slab", serif;
   font-weight: 900;
-  margin-top: 0;
-  align-items: center;
+  margin-right: 2rem;
 }
 
 .nav__brand h2 {
-  margin: 1rem 2rem 0;
   color: #fff;
+  text-align: center;
 }
 
 .nav .collapsible__heading {
@@ -561,7 +556,6 @@ a {
 }
 
 .nav__list {
-  width: auto;
   margin: 0 0 1rem;
 }
 
@@ -576,17 +570,23 @@ a {
 
 .nav__btn {
   display: flex;
+  justify-content: center;
   gap: 3rem;
   margin: 2rem;
+  height: fit-content;
 }
 
 @media screen and (min-width: 768px) {
-  .nav {
-    display: flex;
-    justify-content: space-around;
-    background: var(--color-primary);
-    align-items: baseline;
-    flex-wrap: nowrap;
+  .nav .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .nav__topic {
+    padding: 4rem 0 0;
+  }
+
+  .nav__btn {
+    order: 1;
   }
 }
 
